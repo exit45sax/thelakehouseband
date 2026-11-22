@@ -259,6 +259,7 @@ footer.site .fine{grid-column:1/-1;font-size:14px;color:#9fb5b0;border-top:1px s
       <div class="photo-card" style="margin-top:24px"><img src="img/duo.jpg" alt="LakeHouse performing outdoors"></div>
     </div>
     <form id="bookForm" novalidate>
+      <input type="hidden" name="_subject" value="New LakeHouse booking request"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
       <div class="row2"><label>Name<input name="name" required autocomplete="name"></label><label>Company<input name="company" autocomplete="organization"></label></div>
       <div class="row2"><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
       <label>Message<textarea name="message" required placeholder="Event date, location and type of event"></textarea></label>
@@ -516,7 +517,7 @@ const SOCIAL = [
  ['Venmo','https://venmo.com/u/Ron-Heller-1','<path d="M19.4 3c.7 1.1 1 2.3 1 3.8 0 4.7-4 10.8-7.3 15.2H5.7L2.7 4.3l6.5-.6 1.6 12.7c1.5-2.4 3.3-6.2 3.3-8.8 0-1.4-.2-2.4-.6-3.2L19.4 3z"/>'],
  ['YouTube','https://www.youtube.com/@LakeHouseBand','<path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.8 3-5.8 3z"/>']
 ];
-const FORM_ENDPOINT = ''; // Formspree address goes here when the site goes live
+const FORM_ENDPOINT = 'https://formspree.io/f/xzerkpko'; // booking form → Ron's email via Formspree
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
